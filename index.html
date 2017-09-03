@@ -1,0 +1,35 @@
+<html>    
+    <head>
+        <script>
+            function validateForm(){
+                var image = document.getElementById("image").value;
+                var name = document.getElementById("name").value;
+                if (image =='')
+                {
+                    return false;
+                }
+                if(name =='')
+                {
+                    return false;
+                } 
+                else 
+                {
+                    return true;
+                } 
+                return false;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form method="post" action="overcut.php" enctype="multipart/form-data">
+            Gcode File: <input type="file" accept="text/pain" name="image" id="image" /><br />             
+            Overcut Distance (mm): <input type="text" value="0.15" name="overcut" size="8"/><br />
+            <input type="submit" value='Submit' onclick="return validateForm()"/>
+            
+        </form>
+       <p> <b>About this tool:</b> This tool was created because I wanted a quick and dirty processor
+       to create over-cut for DYI vinyl cutters. I don't have time to do this on-the-fly.
+       This will probably break any open loops, but why would you cut open loops anyway???</p> 
+    </body>
+</html>
