@@ -8,6 +8,7 @@ Methodology: The code detects the Z down command, and begins storing points unti
 The formula is the following:
 
 X = $prevPosX - ($distanceToGoal*($prevPosX-$currentPosX)) / $distance;
+
 Y = $prevPosY - ($distanceToGoal*($prevPosY-$currentPosY)) / $distance;
 
 TODO:
